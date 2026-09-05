@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pit Stop Bebidas | Sua parada rápida para as melhores cervejas</title>
+  <meta name="description" content="Pit Stop Bebidas - franquia especializada em Antarctica, Skol e Brahma. Faça seu pedido online e receba geladinho em casa.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo">
+        <span class="logo__flag">🏁</span>
+        <span class="logo__text">PIT STOP<br><small>BEBIDAS</small></span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#produtos">Produtos</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#unidade">Unidade</a>
+        <a href="#franquia">Seja franqueado</a>
+      </nav>
+
+      <button class="cart-btn" id="cartBtn" aria-label="Abrir carrinho">
+        🛒 <span class="cart-btn__count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero__stripes" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="badge">🏆 Franquia oficial Pit Stop</span>
+        <h1>Sua parada rápida para <span class="hl">as bebidas geladas</span> chegarem até você</h1>
+        <p>Antarctica, Skol e Brahma sempre no ponto certo de gelo. Escolha seus produtos, monte seu pedido e receba na velocidade de um pit stop de verdade.</p>
+        <div class="hero__actions">
+          <a href="#produtos" class="btn btn--primary">Ver produtos</a>
+          <a href="#como-funciona" class="btn btn--ghost">Como funciona</a>
+        </div>
+        <div class="hero__brands">
+          <span class="brand-chip brand-chip--antarctica">Antarctica</span>
+          <span class="brand-chip brand-chip--skol">Skol</span>
+          <span class="brand-chip brand-chip--brahma">Brahma</span>
+        </div>
+      </div>
+      <div class="hero__visual" aria-hidden="true">
+        <div class="crate">
+          <div class="can can--antarctica">Antarctica</div>
+          <div class="can can--skol">Skol</div>
+          <div class="can can--brahma">Brahma</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARCAS -->
+  <section class="brands">
+    <div class="container brands__inner">
+      <p class="brands__label">Marcas disponíveis nesta unidade</p>
+      <div class="brands__row">
+        <div class="brand-logo brand-logo--antarctica">ANTARCTICA</div>
+        <div class="brand-logo brand-logo--skol">SKOL</div>
+        <div class="brand-logo brand-logo--brahma">BRAHMA</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section class="products" id="produtos">
+    <div class="container">
+      <div class="section-head">
+        <h2>Monte seu pedido</h2>
+        <p>Selecione a quantidade de cada produto e adicione ao carrinho. Entrega gelada, direto da unidade Pit Stop mais próxima de você.</p>
+      </div>
+
+      <div class="filters" id="filters">
+        <button class="filter-btn is-active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="antarctica">Antarctica</button>
+        <button class="filter-btn" data-filter="skol">Skol</button>
+        <button class="filter-btn" data-filter="brahma">Brahma</button>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="how" id="como-funciona">
+    <div class="container">
+      <div class="section-head section-head--light">
+        <h2>Como funciona</h2>
+        <p>Do carrinho até a porta de casa em 3 paradas rápidas.</p>
+      </div>
+      <div class="how__grid">
+        <div class="how__card">
+          <div class="how__num">01</div>
+          <h3>Escolha os produtos</h3>
+          <p>Navegue pelo catálogo da sua unidade e adicione as bebidas que quiser ao carrinho.</p>
+        </div>
+        <div class="how__card">
+          <div class="how__num">02</div>
+          <h3>Finalize o pedido</h3>
+          <p>Confirme seu endereço e envie o pedido direto para a unidade pelo WhatsApp.</p>
+        </div>
+        <div class="how__card">
+          <div class="how__num">03</div>
+          <h3>Receba geladinho</h3>
+          <p>A equipe do Pit Stop mais próximo prepara e entrega seu pedido rapidinho.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UNIDADE -->
+  <section class="unit" id="unidade">
+    <div class="container unit__inner">
+      <div class="unit__info">
+        <span class="badge badge--dark">📍 Unidade selecionada</span>
+        <h2>Pit Stop — Unidade Centro</h2>
+        <ul class="unit__list">
+          <li>🕒 Seg. a Dom. — 10h às 23h</li>
+          <li>🚴 Entrega em até 40 minutos</li>
+          <li>💳 Pix, cartão e dinheiro</li>
+          <li>📦 Pedido mínimo: R$ 30,00</li>
+        </ul>
+        <a href="#produtos" class="btn btn--primary">Fazer pedido agora</a>
+      </div>
+      <div class="unit__map" aria-hidden="true">
+        <div class="unit__map-pin">📍</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRANQUIA -->
+  <section class="franchise" id="franquia">
+    <div class="container franchise__inner">
+      <div>
+        <span class="badge">🏁 Expansão da rede</span>
+        <h2>Quer ter um Pit Stop na sua região?</h2>
+        <p>Torne-se um franqueado e leve as marcas Antarctica, Skol e Brahma para perto dos seus clientes, com todo o suporte de operação, tecnologia de pedidos e identidade visual da rede.</p>
+        <a href="#contato" class="btn btn--outline">Quero ser franqueado</a>
+      </div>
+      <div class="franchise__stats">
+        <div class="stat"><strong>+120</strong><span>unidades no Brasil</span></div>
+        <div class="stat"><strong>3</strong><span>marcas parceiras</span></div>
+        <div class="stat"><strong>40min</strong><span>tempo médio de entrega</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO / FOOTER -->
+  <footer class="footer" id="contato">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="logo__flag">🏁</span>
+        <span class="logo__text">PIT STOP<br><small>BEBIDAS</small></span>
+        <p>Franquia especializada em bebidas geladas Antarctica, Skol e Brahma.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Fale conosco</h4>
+        <p>📞 (11) 4002-8922</p>
+        <p>✉️ contato@pitstopbebidas.com.br</p>
+        <a class="btn btn--whatsapp" id="whatsappContact" href="#" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+      </div>
+      <div class="footer__col">
+        <h4>Institucional</h4>
+        <a href="#produtos">Produtos</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#franquia">Seja franqueado</a>
+      </div>
+    </div>
+    <p class="footer__copy">© 2026 Pit Stop Bebidas. Todas as marcas pertencem aos seus respectivos proprietários. Beba com moderação.</p>
+  </footer>
+
+  <!-- CARRINHO LATERAL -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart" id="cart" aria-hidden="true">
+    <div class="cart__header">
+      <h3>Seu pedido</h3>
+      <button class="cart__close" id="cartClose" aria-label="Fechar carrinho">✕</button>
+    </div>
+
+    <div class="cart__items" id="cartItems">
+      <p class="cart__empty" id="cartEmpty">Seu carrinho está vazio. Adicione bebidas para começar seu pedido 🍺</p>
+    </div>
+
+    <div class="cart__footer">
+      <div class="cart__total-row">
+        <span>Total</span>
+        <strong id="cartTotal">R$ 0,00</strong>
+      </div>
+      <form class="cart__form" id="checkoutForm">
+        <input type="text" id="custName" placeholder="Seu nome" required>
+        <input type="tel" id="custPhone" placeholder="WhatsApp para contato" required>
+        <input type="text" id="custAddress" placeholder="Endereço de entrega" required>
+        <button type="submit" class="btn btn--whatsapp btn--block">Enviar pedido no WhatsApp</button>
+      </form>
+    </div>
+  </aside>
+
+  <a class="floating-whatsapp" id="floatingWhatsapp" href="#" target="_blank" rel="noopener" aria-label="Pedir pelo WhatsApp">💬</a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
