@@ -2,30 +2,30 @@
    Agenza — Design tokens
    ========================================================= */
 :root {
-  --bg: #0b0b14;
-  --bg-alt: #101120;
-  --surface: #14152a;
-  --surface-2: #1b1c34;
-  --border: rgba(255, 255, 255, 0.08);
+  --bg: #ffffff;
+  --bg-alt: #eef9f6;
+  --surface: #ffffff;
+  --surface-2: #e2f5ef;
+  --border: rgba(13, 46, 40, 0.1);
 
-  --text: #f4f4f8;
-  --text-muted: #a4a5bd;
-  --text-faint: #6f7090;
+  --text: #0f2620;
+  --text-muted: #4c6b64;
+  --text-faint: #82a39b;
 
-  --accent: #7c5cfc;
-  --accent-2: #22c1a6;
+  --accent: #14b8a6;
+  --accent-2: #0d9488;
   --accent-contrast: #ffffff;
 
-  --gradient: linear-gradient(135deg, #7c5cfc 0%, #3e8bff 100%);
-  --gradient-soft: linear-gradient(135deg, rgba(124, 92, 252, 0.25), rgba(34, 193, 166, 0.15));
+  --gradient: linear-gradient(135deg, #2dd4bf 0%, #0d9488 100%);
+  --gradient-soft: linear-gradient(135deg, rgba(45, 212, 191, 0.16), rgba(13, 148, 136, 0.1));
 
   --radius-sm: 10px;
   --radius-md: 16px;
   --radius-lg: 24px;
   --radius-pill: 999px;
 
-  --shadow-md: 0 12px 30px rgba(5, 5, 15, 0.45);
-  --shadow-lg: 0 24px 60px rgba(5, 5, 15, 0.55);
+  --shadow-md: 0 12px 30px rgba(15, 60, 52, 0.1);
+  --shadow-lg: 0 24px 60px rgba(15, 60, 52, 0.14);
 
   --font-heading: "Sora", "Inter", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
@@ -159,12 +159,12 @@ input {
 .btn--primary {
   background: var(--gradient);
   color: #fff;
-  box-shadow: 0 10px 24px rgba(124, 92, 252, 0.35);
+  box-shadow: 0 10px 24px rgba(13, 148, 136, 0.28);
 }
 
 .btn--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 16px 32px rgba(124, 92, 252, 0.45);
+  box-shadow: 0 16px 32px rgba(13, 148, 136, 0.38);
 }
 
 .btn--outline {
@@ -201,7 +201,7 @@ input {
   display: flex;
   align-items: center;
   z-index: 500;
-  background: rgba(11, 11, 20, 0.7);
+  background: rgba(255, 255, 255, 0.72);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s ease, background 0.3s ease;
@@ -209,7 +209,7 @@ input {
 
 .header.is-scrolled {
   border-bottom-color: var(--border);
-  background: rgba(11, 11, 20, 0.92);
+  background: rgba(255, 255, 255, 0.92);
 }
 
 .header__inner {
@@ -290,7 +290,7 @@ input {
   position: absolute;
   inset: -20% -10% auto -10%;
   height: 620px;
-  background: radial-gradient(60% 60% at 50% 0%, rgba(124, 92, 252, 0.35), transparent 70%);
+  background: radial-gradient(60% 60% at 50% 0%, rgba(45, 212, 191, 0.28), transparent 70%);
   pointer-events: none;
 }
 
@@ -537,7 +537,7 @@ input {
   right: -80px;
   width: 420px;
   height: 420px;
-  background: radial-gradient(circle, rgba(124, 92, 252, 0.22), transparent 70%);
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.22), transparent 70%);
 }
 
 .parallax-blob--customizer-a {
@@ -545,7 +545,7 @@ input {
   left: -100px;
   width: 460px;
   height: 460px;
-  background: radial-gradient(circle, rgba(124, 92, 252, 0.3), transparent 70%);
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.26), transparent 70%);
 }
 
 .parallax-blob--customizer-b {
@@ -553,7 +553,7 @@ input {
   right: -120px;
   width: 380px;
   height: 380px;
-  background: radial-gradient(circle, rgba(34, 193, 166, 0.22), transparent 70%);
+  background: radial-gradient(circle, rgba(13, 148, 136, 0.2), transparent 70%);
 }
 
 .parallax-blob--cta {
@@ -561,7 +561,7 @@ input {
   left: calc(50% - 280px);
   width: 560px;
   height: 420px;
-  background: radial-gradient(circle, rgba(124, 92, 252, 0.28), transparent 70%);
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.24), transparent 70%);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -622,7 +622,7 @@ input {
 }
 
 .eyebrow--light {
-  color: #cbb9ff;
+  color: #d7fbf3;
 }
 
 .section-head--light h2,
@@ -659,7 +659,7 @@ input {
 
 .feature-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(124, 92, 252, 0.5);
+  border-color: rgba(13, 148, 136, 0.45);
 }
 
 .feature-card__icon {
@@ -689,7 +689,7 @@ input {
    ========================================================= */
 .customizer {
   padding: 100px 0;
-  background: radial-gradient(90% 100% at 50% 0%, #1a1440 0%, var(--bg) 60%);
+  background: radial-gradient(90% 100% at 50% 0%, #d9f5ef 0%, var(--bg) 60%);
   position: relative;
   overflow: hidden;
 }
@@ -1076,7 +1076,7 @@ input {
 
 .price-card--highlight {
   border-color: var(--accent);
-  background: linear-gradient(180deg, rgba(124, 92, 252, 0.12), var(--surface) 40%);
+  background: linear-gradient(180deg, rgba(45, 212, 191, 0.14), var(--surface) 40%);
   transform: scale(1.03);
   box-shadow: var(--shadow-lg);
 }
@@ -1381,7 +1381,7 @@ input {
     height: auto;
     max-height: 100vh;
     overflow-y: auto;
-    background: rgba(11, 11, 20, 0.98);
+    background: rgba(255, 255, 255, 0.98);
     border-bottom: 1px solid var(--border);
   }
 
