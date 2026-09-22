@@ -123,6 +123,8 @@ input {
 }
 
 .container {
+  position: relative;
+  z-index: 1;
   width: 100%;
   max-width: var(--container);
   margin: 0 auto;
@@ -298,6 +300,10 @@ input {
   grid-template-columns: 1.05fr 0.95fr;
   gap: 56px;
   align-items: center;
+}
+
+.hero__parallax {
+  will-change: transform;
 }
 
 .badge {
@@ -515,6 +521,58 @@ input {
 }
 
 /* =========================================================
+   Parallax decoration (blurred gradient orbs)
+   ========================================================= */
+.parallax-blob {
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+  will-change: transform;
+}
+
+.parallax-blob--features {
+  top: -120px;
+  right: -80px;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(124, 92, 252, 0.22), transparent 70%);
+}
+
+.parallax-blob--customizer-a {
+  top: -60px;
+  left: -100px;
+  width: 460px;
+  height: 460px;
+  background: radial-gradient(circle, rgba(124, 92, 252, 0.3), transparent 70%);
+}
+
+.parallax-blob--customizer-b {
+  bottom: -140px;
+  right: -120px;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(34, 193, 166, 0.22), transparent 70%);
+}
+
+.parallax-blob--cta {
+  top: -180px;
+  left: calc(50% - 280px);
+  width: 560px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(124, 92, 252, 0.28), transparent 70%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__parallax,
+  .phone-mock,
+  .parallax-blob {
+    transform: none !important;
+  }
+}
+
+/* =========================================================
    Logos strip
    ========================================================= */
 .logos {
@@ -581,6 +639,8 @@ input {
    ========================================================= */
 .features {
   padding: 100px 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .feature-grid {
@@ -630,6 +690,8 @@ input {
 .customizer {
   padding: 100px 0;
   background: radial-gradient(90% 100% at 50% 0%, #1a1440 0%, var(--bg) 60%);
+  position: relative;
+  overflow: hidden;
 }
 
 .customizer__grid {
@@ -1137,6 +1199,8 @@ input {
    ========================================================= */
 .final-cta {
   padding: 100px 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .final-cta__inner {
@@ -1276,7 +1340,7 @@ input {
     grid-template-columns: 1fr;
   }
 
-  .hero__visual {
+  .hero__parallax--visual {
     order: -1;
   }
 

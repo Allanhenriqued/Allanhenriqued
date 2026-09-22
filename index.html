@@ -49,67 +49,71 @@
   <main id="conteudo">
     <!-- HERO -->
     <section class="hero" id="top">
-      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__glow" data-parallax="0.18" aria-hidden="true"></div>
       <div class="container hero__inner">
-        <div class="hero__content" data-reveal>
-          <span class="badge">✨ Plataforma de agendamento personalizável</span>
-          <h1>Sua página de agendamento, <span class="hl">do jeito que o seu negócio merece</span></h1>
-          <p class="hero__lead">
-            O Agenza é o SaaS que dá liberdade total para barbearias, salões, clínicas e estúdios
-            criarem uma página de agendamento com a própria identidade — cores, fontes, serviços e
-            regras de horário — pronta em minutos, sem código.
-          </p>
-          <div class="hero__actions">
-            <a href="#cta" class="btn btn--primary">Criar minha página grátis</a>
-            <a href="#personalizacao" class="btn btn--outline">Ver personalização ao vivo</a>
-          </div>
-          <div class="hero__stats">
-            <div class="hero__stat">
-              <strong class="js-counter" data-target="3200">0</strong>
-              <span>negócios ativos</span>
+        <div class="hero__parallax hero__parallax--content" data-parallax="0.07">
+          <div class="hero__content" data-reveal>
+            <span class="badge">✨ Plataforma de agendamento personalizável</span>
+            <h1>Sua página de agendamento, <span class="hl">do jeito que o seu negócio merece</span></h1>
+            <p class="hero__lead">
+              O Agenza é o SaaS que dá liberdade total para barbearias, salões, clínicas e estúdios
+              criarem uma página de agendamento com a própria identidade — cores, fontes, serviços e
+              regras de horário — pronta em minutos, sem código.
+            </p>
+            <div class="hero__actions">
+              <a href="#cta" class="btn btn--primary">Criar minha página grátis</a>
+              <a href="#personalizacao" class="btn btn--outline">Ver personalização ao vivo</a>
             </div>
-            <div class="hero__stat">
-              <strong class="js-counter" data-target="480000">0</strong>
-              <span>agendamentos/mês</span>
-            </div>
-            <div class="hero__stat">
-              <strong class="js-counter" data-target="98" data-suffix="%">0%</strong>
-              <span>de satisfação</span>
+            <div class="hero__stats">
+              <div class="hero__stat">
+                <strong class="js-counter" data-target="3200">0</strong>
+                <span>negócios ativos</span>
+              </div>
+              <div class="hero__stat">
+                <strong class="js-counter" data-target="480000">0</strong>
+                <span>agendamentos/mês</span>
+              </div>
+              <div class="hero__stat">
+                <strong class="js-counter" data-target="98" data-suffix="%">0%</strong>
+                <span>de satisfação</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="hero__visual" data-reveal aria-hidden="true">
-          <div class="browser-mock">
-            <div class="browser-mock__bar">
-              <span></span><span></span><span></span>
-              <div class="browser-mock__url">meunegocio.agenza.app</div>
+        <div class="hero__parallax hero__parallax--visual" data-parallax="-0.06">
+          <div class="hero__visual" data-reveal aria-hidden="true">
+            <div class="browser-mock">
+              <div class="browser-mock__bar">
+                <span></span><span></span><span></span>
+                <div class="browser-mock__url">meunegocio.agenza.app</div>
+              </div>
+              <div class="browser-mock__body">
+                <div class="mini-hero">
+                  <div class="mini-hero__avatar">💈</div>
+                  <div class="mini-hero__title">Barbearia do Zé</div>
+                  <div class="mini-hero__sub">Escolha um serviço e horário</div>
+                </div>
+                <div class="mini-slots">
+                  <span class="mini-slot">09:00</span>
+                  <span class="mini-slot is-active">10:30</span>
+                  <span class="mini-slot">13:00</span>
+                  <span class="mini-slot">15:30</span>
+                </div>
+                <div class="mini-card">
+                  <span>Corte + Barba</span>
+                  <strong>R$ 65</strong>
+                </div>
+                <div class="mini-card">
+                  <span>Corte degradê</span>
+                  <strong>R$ 45</strong>
+                </div>
+                <button class="mini-btn">Confirmar agendamento</button>
+              </div>
             </div>
-            <div class="browser-mock__body">
-              <div class="mini-hero">
-                <div class="mini-hero__avatar">💈</div>
-                <div class="mini-hero__title">Barbearia do Zé</div>
-                <div class="mini-hero__sub">Escolha um serviço e horário</div>
-              </div>
-              <div class="mini-slots">
-                <span class="mini-slot">09:00</span>
-                <span class="mini-slot is-active">10:30</span>
-                <span class="mini-slot">13:00</span>
-                <span class="mini-slot">15:30</span>
-              </div>
-              <div class="mini-card">
-                <span>Corte + Barba</span>
-                <strong>R$ 65</strong>
-              </div>
-              <div class="mini-card">
-                <span>Corte degradê</span>
-                <strong>R$ 45</strong>
-              </div>
-              <button class="mini-btn">Confirmar agendamento</button>
-            </div>
+            <div class="floaty floaty--1">🔔 Lembrete enviado</div>
+            <div class="floaty floaty--2">✅ Novo agendamento</div>
           </div>
-          <div class="floaty floaty--1">🔔 Lembrete enviado</div>
-          <div class="floaty floaty--2">✅ Novo agendamento</div>
         </div>
       </div>
     </section>
@@ -131,6 +135,7 @@
 
     <!-- VANTAGENS -->
     <section class="features" id="vantagens">
+      <div class="parallax-blob parallax-blob--features" data-parallax="0.12" aria-hidden="true"></div>
       <div class="container">
         <div class="section-head" data-reveal>
           <span class="eyebrow">Vantagens</span>
@@ -175,6 +180,8 @@
 
     <!-- PERSONALIZAÇÃO / DEMO INTERATIVA -->
     <section class="customizer" id="personalizacao">
+      <div class="parallax-blob parallax-blob--customizer-a" data-parallax="0.22" aria-hidden="true"></div>
+      <div class="parallax-blob parallax-blob--customizer-b" data-parallax="-0.14" aria-hidden="true"></div>
       <div class="container">
         <div class="section-head section-head--light" data-reveal>
           <span class="eyebrow eyebrow--light">Personalização ao vivo</span>
@@ -218,7 +225,7 @@
           </div>
 
           <div class="customizer__preview">
-            <div class="phone-mock">
+            <div class="phone-mock" data-parallax="-0.05">
               <div class="phone-mock__notch" aria-hidden="true"></div>
               <div class="phone-mock__screen" id="previewScreen">
                 <div class="preview-cover">
@@ -433,6 +440,7 @@
 
     <!-- CTA FINAL -->
     <section class="final-cta" id="cta">
+      <div class="parallax-blob parallax-blob--cta" data-parallax="0.16" aria-hidden="true"></div>
       <div class="container final-cta__inner" data-reveal>
         <h2>Pronto para ter a sua própria página de agendamento?</h2>
         <p>Crie sua conta agora e personalize sua página em menos de 10 minutos. Sem cartão de crédito.</p>
