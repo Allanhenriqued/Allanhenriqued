@@ -1,213 +1,493 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pit Stop Bebidas | Sua parada rápida para as melhores cervejas</title>
-  <meta name="description" content="Pit Stop Bebidas - franquia especializada em Antarctica, Skol e Brahma. Faça seu pedido online e receba geladinho em casa.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agenza — O app de agendamento do seu jeito</title>
+  <meta name="description" content="Agenza é o app de agendamento que cada negócio personaliza do seu jeito: cores, fontes, serviços e regras de horário, direto do aplicativo. Assine pelo site em minutos. Ideal para barbearias, salões, clínicas e estúdios." />
+  <meta name="theme-color" content="#4B648D" />
+
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <meta property="og:title" content="Agenza — Sua agenda, sua marca" />
+  <meta property="og:description" content="Assine pelo site e personalize seu app de agendamento do seu jeito, sem escrever uma linha de código." />
+  <meta property="og:type" content="website" />
 </head>
 <body>
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
 
   <!-- HEADER -->
-  <header class="header">
+  <header class="header" id="header">
     <div class="container header__inner">
       <a href="#top" class="logo">
-        <span class="logo__flag">🏁</span>
-        <span class="logo__text">PIT STOP<br><small>BEBIDAS</small></span>
+        <span class="logo__mark" aria-hidden="true">A</span>
+        <span class="logo__text">Agenza</span>
       </a>
 
-      <nav class="nav" id="nav">
-        <a href="#produtos">Produtos</a>
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <a href="#vantagens">Vantagens</a>
+        <a href="#personalizacao">Personalização</a>
         <a href="#como-funciona">Como funciona</a>
-        <a href="#unidade">Unidade</a>
-        <a href="#franquia">Seja franqueado</a>
+        <a href="#planos">Planos</a>
+        <a href="#faq">Dúvidas</a>
       </nav>
 
-      <button class="cart-btn" id="cartBtn" aria-label="Abrir carrinho">
-        🛒 <span class="cart-btn__count" id="cartCount">0</span>
+      <div class="header__actions">
+        <a href="#planos" class="btn btn--ghost btn--sm">Entrar</a>
+        <a href="#cta" class="btn btn--primary btn--sm">Teste grátis</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div class="hero__stripes" aria-hidden="true"></div>
-    <div class="container hero__inner">
-      <div class="hero__content">
-        <span class="badge">🏆 Franquia oficial Pit Stop</span>
-        <h1>Sua parada rápida para <span class="hl">as bebidas geladas</span> chegarem até você</h1>
-        <p>Antarctica, Skol e Brahma sempre no ponto certo de gelo. Escolha seus produtos, monte seu pedido e receba na velocidade de um pit stop de verdade.</p>
-        <div class="hero__actions">
-          <a href="#produtos" class="btn btn--primary">Ver produtos</a>
-          <a href="#como-funciona" class="btn btn--ghost">Como funciona</a>
+  <main id="conteudo">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="mesh-bg" aria-hidden="true">
+        <span class="mesh-bg__blob mesh-bg__blob--a"></span>
+        <span class="mesh-bg__blob mesh-bg__blob--b"></span>
+        <span class="mesh-bg__blob mesh-bg__blob--c"></span>
+        <span class="mesh-bg__blob mesh-bg__blob--d"></span>
+      </div>
+      <div class="container hero__inner">
+        <div class="hero__parallax hero__parallax--content" data-parallax="0.07">
+          <div class="hero__content" data-reveal>
+            <span class="badge">✨ App de agendamento personalizável</span>
+            <h1>Seu app de agendamento, <span class="hl">do jeito que o seu negócio merece</span></h1>
+            <p class="hero__lead">
+              O Agenza é o app que dá liberdade total para barbearias, salões, clínicas e estúdios
+              personalizarem sua agenda com a própria identidade — cores, fontes, serviços e regras
+              de horário — direto do aplicativo. Assine pelo site e comece em minutos, sem código.
+            </p>
+            <div class="hero__actions">
+              <a href="#cta" class="btn btn--primary">Criar minha conta grátis</a>
+              <a href="#personalizacao" class="btn btn--outline">Ver personalização ao vivo</a>
+            </div>
+            <div class="hero__stats">
+              <div class="hero__stat">
+                <strong class="js-counter" data-target="3200">0</strong>
+                <span>negócios ativos</span>
+              </div>
+              <div class="hero__stat">
+                <strong class="js-counter" data-target="480000">0</strong>
+                <span>agendamentos/mês</span>
+              </div>
+              <div class="hero__stat">
+                <strong class="js-counter" data-target="98" data-suffix="%">0%</strong>
+                <span>de satisfação</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="hero__brands">
-          <span class="brand-chip brand-chip--antarctica">Antarctica</span>
-          <span class="brand-chip brand-chip--skol">Skol</span>
-          <span class="brand-chip brand-chip--brahma">Brahma</span>
-        </div>
-      </div>
-      <div class="hero__visual" aria-hidden="true">
-        <div class="crate">
-          <div class="can can--antarctica">Antarctica</div>
-          <div class="can can--skol">Skol</div>
-          <div class="can can--brahma">Brahma</div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- MARCAS -->
-  <section class="brands">
-    <div class="container brands__inner">
-      <p class="brands__label">Marcas disponíveis nesta unidade</p>
-      <div class="brands__row">
-        <div class="brand-logo brand-logo--antarctica">ANTARCTICA</div>
-        <div class="brand-logo brand-logo--skol">SKOL</div>
-        <div class="brand-logo brand-logo--brahma">BRAHMA</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRODUTOS -->
-  <section class="products" id="produtos">
-    <div class="container">
-      <div class="section-head">
-        <h2>Monte seu pedido</h2>
-        <p>Selecione a quantidade de cada produto e adicione ao carrinho. Entrega gelada, direto da unidade Pit Stop mais próxima de você.</p>
-      </div>
-
-      <div class="filters" id="filters">
-        <button class="filter-btn is-active" data-filter="todos">Todos</button>
-        <button class="filter-btn" data-filter="antarctica">Antarctica</button>
-        <button class="filter-btn" data-filter="skol">Skol</button>
-        <button class="filter-btn" data-filter="brahma">Brahma</button>
-      </div>
-
-      <div class="product-grid" id="productGrid"></div>
-    </div>
-  </section>
-
-  <!-- COMO FUNCIONA -->
-  <section class="how" id="como-funciona">
-    <div class="container">
-      <div class="section-head section-head--light">
-        <h2>Como funciona</h2>
-        <p>Do carrinho até a porta de casa em 3 paradas rápidas.</p>
-      </div>
-      <div class="how__grid">
-        <div class="how__card">
-          <div class="how__num">01</div>
-          <h3>Escolha os produtos</h3>
-          <p>Navegue pelo catálogo da sua unidade e adicione as bebidas que quiser ao carrinho.</p>
-        </div>
-        <div class="how__card">
-          <div class="how__num">02</div>
-          <h3>Finalize o pedido</h3>
-          <p>Confirme seu endereço e envie o pedido direto para a unidade pelo WhatsApp.</p>
-        </div>
-        <div class="how__card">
-          <div class="how__num">03</div>
-          <h3>Receba geladinho</h3>
-          <p>A equipe do Pit Stop mais próximo prepara e entrega seu pedido rapidinho.</p>
+        <div class="hero__parallax hero__parallax--visual" data-parallax="-0.06">
+          <div class="hero__visual" data-reveal aria-hidden="true">
+            <div class="browser-mock">
+              <div class="browser-mock__bar">
+                <span></span><span></span><span></span>
+                <div class="browser-mock__url">meunegocio.agenza.app</div>
+              </div>
+              <div class="browser-mock__body">
+                <div class="mini-hero">
+                  <div class="mini-hero__avatar">💈</div>
+                  <div class="mini-hero__title">Barbearia do Zé</div>
+                  <div class="mini-hero__sub">Escolha um serviço e horário</div>
+                </div>
+                <div class="mini-slots">
+                  <span class="mini-slot">09:00</span>
+                  <span class="mini-slot is-active">10:30</span>
+                  <span class="mini-slot">13:00</span>
+                  <span class="mini-slot">15:30</span>
+                </div>
+                <div class="mini-card">
+                  <span>Corte + Barba</span>
+                  <strong>R$ 65</strong>
+                </div>
+                <div class="mini-card">
+                  <span>Corte degradê</span>
+                  <strong>R$ 45</strong>
+                </div>
+                <button class="mini-btn">Confirmar agendamento</button>
+              </div>
+            </div>
+            <div class="floaty floaty--1">🔔 Lembrete enviado</div>
+            <div class="floaty floaty--2">✅ Novo agendamento</div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- UNIDADE -->
-  <section class="unit" id="unidade">
-    <div class="container unit__inner">
-      <div class="unit__info">
-        <span class="badge badge--dark">📍 Unidade selecionada</span>
-        <h2>Pit Stop — Unidade Centro</h2>
-        <ul class="unit__list">
-          <li>🕒 Seg. a Dom. — 10h às 23h</li>
-          <li>🚴 Entrega em até 40 minutos</li>
-          <li>💳 Pix, cartão e dinheiro</li>
-          <li>📦 Pedido mínimo: R$ 30,00</li>
-        </ul>
-        <a href="#produtos" class="btn btn--primary">Fazer pedido agora</a>
+    <!-- LOGOS -->
+    <section class="logos">
+      <div class="container">
+        <p class="logos__label">Feito para negócios de serviço que vivem de agenda cheia</p>
+        <div class="logos__row">
+          <span>💈 Barbearias</span>
+          <span>💇 Salões</span>
+          <span>💅 Studios de nail</span>
+          <span>🩺 Clínicas</span>
+          <span>🧘 Estúdios de bem-estar</span>
+          <span>🐾 Pet shops</span>
+        </div>
       </div>
-      <div class="unit__map" aria-hidden="true">
-        <div class="unit__map-pin">📍</div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FRANQUIA -->
-  <section class="franchise" id="franquia">
-    <div class="container franchise__inner">
-      <div>
-        <span class="badge">🏁 Expansão da rede</span>
-        <h2>Quer ter um Pit Stop na sua região?</h2>
-        <p>Torne-se um franqueado e leve as marcas Antarctica, Skol e Brahma para perto dos seus clientes, com todo o suporte de operação, tecnologia de pedidos e identidade visual da rede.</p>
-        <a href="#contato" class="btn btn--outline">Quero ser franqueado</a>
-      </div>
-      <div class="franchise__stats">
-        <div class="stat"><strong>+120</strong><span>unidades no Brasil</span></div>
-        <div class="stat"><strong>3</strong><span>marcas parceiras</span></div>
-        <div class="stat"><strong>40min</strong><span>tempo médio de entrega</span></div>
-      </div>
-    </div>
-  </section>
+    <!-- VANTAGENS -->
+    <section class="features" id="vantagens">
+      <div class="parallax-blob parallax-blob--features" data-parallax="0.12" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Vantagens</span>
+          <h2>Tudo o que a sua agenda precisa, em um só lugar</h2>
+          <p>Menos tempo no telefone remarcando horário, mais tempo atendendo quem importa: o seu cliente.</p>
+        </div>
 
-  <!-- CONTATO / FOOTER -->
-  <footer class="footer" id="contato">
+        <div class="feature-grid">
+          <article class="feature-card" data-reveal>
+            <div class="feature-card__icon">🎨</div>
+            <h3>Personalização total</h3>
+            <p>Cores, fontes, capa, logo e até o tom da mensagem: personalize tudo direto do aplicativo, do jeito que a sua marca pede.</p>
+          </article>
+          <article class="feature-card" data-reveal>
+            <div class="feature-card__icon">⏱️</div>
+            <h3>Agendamento 24 horas</h3>
+            <p>Clientes marcam horário a qualquer momento, direto pelo celular, sem precisar ligar ou mandar mensagem.</p>
+          </article>
+          <article class="feature-card" data-reveal>
+            <div class="feature-card__icon">💬</div>
+            <h3>Lembretes automáticos</h3>
+            <p>Envio automático de confirmações e lembretes por WhatsApp e SMS, reduzindo faltas em até 60%.</p>
+          </article>
+          <article class="feature-card" data-reveal>
+            <div class="feature-card__icon">💳</div>
+            <h3>Pagamentos e sinal</h3>
+            <p>Receba online, cobre sinal para reduzir no-show e ofereça pacotes e assinaturas para seus clientes.</p>
+          </article>
+          <article class="feature-card" data-reveal>
+            <div class="feature-card__icon">👥</div>
+            <h3>Equipe e múltiplas unidades</h3>
+            <p>Cadastre profissionais, horários individuais e gerencie mais de uma unidade em um único app.</p>
+          </article>
+          <article class="feature-card" data-reveal>
+            <div class="feature-card__icon">📊</div>
+            <h3>Relatórios em tempo real</h3>
+            <p>Acompanhe faturamento, taxa de ocupação e serviços mais procurados com dashboards simples e claros.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERSONALIZAÇÃO / DEMO INTERATIVA -->
+    <section class="customizer" id="personalizacao">
+      <div class="parallax-blob parallax-blob--customizer-a" data-parallax="0.22" aria-hidden="true"></div>
+      <div class="parallax-blob parallax-blob--customizer-b" data-parallax="-0.14" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Personalização ao vivo</span>
+          <h2>Monte a identidade do seu negócio em segundos</h2>
+          <p>No aplicativo, escolha o segmento, a cor da marca e o estilo da tipografia — veja a prévia mudar instantaneamente.</p>
+        </div>
+
+        <div class="editor" data-reveal>
+          <div class="editor__bar">
+            <span class="editor__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="editor__crumb">App Agenza — Personalização</span>
+          </div>
+
+          <div class="editor__body">
+            <div class="editor__panel">
+              <div class="control-group">
+                <span class="control-label">1. Segmento do negócio</span>
+                <div class="chip-group" id="segmentGroup" role="radiogroup" aria-label="Segmento do negócio">
+                  <button class="chip is-active" data-segment="barber" role="radio" aria-checked="true"><span class="chip__glyph">💈</span>Barbearia</button>
+                  <button class="chip" data-segment="salon" role="radio" aria-checked="false"><span class="chip__glyph">💇</span>Salão de beleza</button>
+                  <button class="chip" data-segment="clinic" role="radio" aria-checked="false"><span class="chip__glyph">🩺</span>Clínica</button>
+                  <button class="chip" data-segment="studio" role="radio" aria-checked="false"><span class="chip__glyph">🧘</span>Estúdio</button>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <span class="control-label">2. Cor da marca</span>
+                <div class="swatch-group" id="colorGroup" role="radiogroup" aria-label="Cor da marca">
+                  <button class="swatch is-active" style="--sw:#7C5CFC" data-color="#7C5CFC" role="radio" aria-checked="true" aria-label="Roxo"></button>
+                  <button class="swatch" style="--sw:#22C1A6" data-color="#22C1A6" role="radio" aria-checked="false" aria-label="Verde"></button>
+                  <button class="swatch" style="--sw:#FF6B6B" data-color="#FF6B6B" role="radio" aria-checked="false" aria-label="Coral"></button>
+                  <button class="swatch" style="--sw:#FFB020" data-color="#FFB020" role="radio" aria-checked="false" aria-label="Âmbar"></button>
+                  <button class="swatch" style="--sw:#3E8BFF" data-color="#3E8BFF" role="radio" aria-checked="false" aria-label="Azul"></button>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <span class="control-label">3. Estilo da tipografia</span>
+                <div class="chip-group chip-group--font" id="fontGroup" role="radiogroup" aria-label="Estilo da tipografia">
+                  <button class="chip is-active" data-font="rounded" role="radio" aria-checked="true"><span class="chip__glyph chip__glyph--rounded">Aa</span>Arredondada</button>
+                  <button class="chip" data-font="elegant" role="radio" aria-checked="false"><span class="chip__glyph chip__glyph--elegant">Aa</span>Elegante</button>
+                  <button class="chip" data-font="bold" role="radio" aria-checked="false"><span class="chip__glyph chip__glyph--bold">Aa</span>Moderna</button>
+                </div>
+              </div>
+
+              <div class="editor__summary">
+                <span class="editor__summary-dot" id="summaryDot" style="--sw:#7C5CFC" aria-hidden="true"></span>
+                <span>Tema atual: <strong id="summaryText">Barbearia · Roxo · Arredondada</strong></span>
+              </div>
+
+              <p class="customizer__hint">Essa é só uma prévia — no aplicativo completo você também edita textos, serviços, fotos e regras de horário.</p>
+            </div>
+
+            <div class="editor__preview">
+              <div class="phone-mock" data-parallax="-0.05" id="phoneMock">
+                <div class="phone-mock__notch" aria-hidden="true"></div>
+                <div class="phone-mock__screen" id="previewScreen">
+                  <div class="preview-cover">
+                    <span class="preview-avatar" id="previewAvatar">💈</span>
+                    <h3 id="previewTitle">Barbearia do Zé</h3>
+                    <p id="previewSubtitle">Agende seu horário em poucos toques</p>
+                  </div>
+                  <div class="preview-services" id="previewServices"></div>
+                  <button class="preview-cta" id="previewCta">Agendar agora</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="how" id="como-funciona">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Como funciona</span>
+          <h2>Da criação ao primeiro agendamento em 4 passos</h2>
+        </div>
+        <div class="how__grid">
+          <div class="how__card" data-reveal>
+            <div class="how__num">01</div>
+            <h3>Assine pelo site</h3>
+            <p>Cadastre seu negócio e escolha o segmento para começar com um modelo pronto.</p>
+          </div>
+          <div class="how__card" data-reveal>
+            <div class="how__num">02</div>
+            <h3>Personalize no aplicativo</h3>
+            <p>Baixe o app Agenza e defina cores, fontes, logo, serviços, preços e horários de atendimento.</p>
+          </div>
+          <div class="how__card" data-reveal>
+            <div class="how__num">03</div>
+            <h3>Compartilhe o link</h3>
+            <p>Divulgue seu link de agendamento no Instagram, WhatsApp e Google Meu Negócio.</p>
+          </div>
+          <div class="how__card" data-reveal>
+            <div class="how__num">04</div>
+            <h3>Receba agendamentos</h3>
+            <p>Acompanhe tudo direto do aplicativo, com lembretes automáticos para reduzir faltas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="testimonials" id="depoimentos">
+      <div class="container">
+        <div class="section-head section-head--light" data-reveal>
+          <span class="eyebrow eyebrow--light">Depoimentos</span>
+          <h2>Quem usa, recomenda</h2>
+        </div>
+
+        <div class="testimonial-slider" data-reveal>
+          <button class="slider-nav slider-nav--prev" id="prevTestimonial" aria-label="Depoimento anterior">‹</button>
+
+          <div class="testimonial-track" id="testimonialTrack">
+            <blockquote class="testimonial">
+              <p>“Consegui deixar tudo com a cara da barbearia direto no app, em uma tarde. As faltas caíram muito depois dos lembretes automáticos.”</p>
+              <footer><strong>Zé Ricardo</strong> — Barbearia do Zé</footer>
+            </blockquote>
+            <blockquote class="testimonial">
+              <p>“O que mais gosto é a liberdade de personalizar tudo: cores, fotos, até o texto do botão de agendar.”</p>
+              <footer><strong>Camila Duarte</strong> — Studio Camila Nails</footer>
+            </blockquote>
+            <blockquote class="testimonial">
+              <p>“Gerenciar duas unidades e a agenda dos fisioterapeutas ficou simples. Os relatórios ajudam demais na gestão.”</p>
+              <footer><strong>Dr. Marcos Lima</strong> — Clínica VivaBem</footer>
+            </blockquote>
+          </div>
+
+          <button class="slider-nav slider-nav--next" id="nextTestimonial" aria-label="Próximo depoimento">›</button>
+        </div>
+        <div class="slider-dots" id="sliderDots"></div>
+      </div>
+    </section>
+
+    <!-- PLANOS -->
+    <section class="pricing" id="planos">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Planos</span>
+          <h2>Escolha o plano ideal para o seu momento</h2>
+          <p>Comece grátis por 14 dias. Cancele quando quiser, sem burocracia.</p>
+
+          <div class="billing-toggle" role="group" aria-label="Ciclo de cobrança">
+            <span class="billing-toggle__label is-active" data-cycle-label="monthly">Mensal</span>
+            <button class="billing-switch" id="billingSwitch" role="switch" aria-checked="false" aria-label="Alternar para cobrança anual">
+              <span class="billing-switch__thumb"></span>
+            </button>
+            <span class="billing-toggle__label" data-cycle-label="annual">Anual <span class="billing-toggle__badge">-20%</span></span>
+          </div>
+        </div>
+
+        <div class="pricing-grid pricing-grid--duo" data-reveal>
+          <article class="price-card">
+            <h3>Start</h3>
+            <p class="price-card__desc">Para quem está começando a organizar a agenda.</p>
+            <div class="price-card__amount">
+              <span>R$</span>
+              <strong class="js-price" data-monthly="49" data-annual="39">49</strong>
+              <span>/mês</span>
+            </div>
+            <ul class="price-card__list">
+              <li>1 profissional</li>
+              <li>Personalização pelo app</li>
+              <li>Agendamento ilimitado</li>
+              <li>Lembretes por e-mail</li>
+            </ul>
+            <a href="#cta" class="btn btn--outline btn--block">Começar grátis</a>
+          </article>
+
+          <article class="price-card price-card--highlight">
+            <span class="price-card__tag">Mais completo</span>
+            <h3>Studio</h3>
+            <p class="price-card__desc">Para redes com múltiplas unidades e equipe.</p>
+            <div class="price-card__amount">
+              <span>R$</span>
+              <strong class="js-price" data-monthly="199" data-annual="159">199</strong>
+              <span>/mês</span>
+            </div>
+            <ul class="price-card__list">
+              <li>Profissionais ilimitados</li>
+              <li>Múltiplas unidades</li>
+              <li>Domínio próprio</li>
+              <li>Lembretes por WhatsApp e SMS</li>
+              <li>Planos de assinatura de serviços</li>
+              <li>Suporte prioritário</li>
+            </ul>
+            <a href="#cta" class="btn btn--primary btn--block">Começar grátis</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="container container--narrow">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Dúvidas frequentes</span>
+          <h2>Perguntas que recebemos com frequência</h2>
+        </div>
+
+        <div class="accordion" id="accordion" data-reveal>
+          <div class="accordion__item is-open">
+            <button class="accordion__trigger" aria-expanded="true">
+              Preciso saber programar para personalizar meu app de agendamento?
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__panel">
+              <p>Não. Toda a personalização — cores, fontes, textos, fotos e serviços — é feita direto no aplicativo Agenza, sem precisar escrever código.</p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              Posso usar meu próprio domínio?
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__panel">
+              <p>Sim, no plano Studio você pode conectar um domínio próprio, como agenda.seunegocio.com.br.</p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              Como funcionam os lembretes automáticos?
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__panel">
+              <p>O Agenza envia confirmações e lembretes automáticos por e-mail, SMS ou WhatsApp antes do horário marcado, reduzindo faltas.</p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              Existe período de teste gratuito?
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__panel">
+              <p>Sim, todos os planos incluem 14 dias grátis, sem necessidade de cartão de crédito para começar.</p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              Posso cancelar quando quiser?
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__panel">
+              <p>Sim, o cancelamento pode ser feito a qualquer momento direto pela sua conta no site, sem multas ou burocracia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="final-cta" id="cta">
+      <div class="parallax-blob parallax-blob--cta" data-parallax="0.16" aria-hidden="true"></div>
+      <div class="container final-cta__inner" data-reveal>
+        <h2>Pronto para ter seu próprio app de agendamento?</h2>
+        <p>Crie sua conta pelo site e personalize tudo no aplicativo Agenza em menos de 10 minutos. Sem cartão de crédito.</p>
+        <form class="cta-form" id="ctaForm">
+          <label class="sr-only" for="ctaEmail">Seu e-mail</label>
+          <input type="email" id="ctaEmail" placeholder="Seu melhor e-mail" required />
+          <button type="submit" class="btn btn--primary">Criar minha conta grátis</button>
+        </form>
+        <p class="cta-note" id="ctaNote">14 dias grátis · Cancele quando quiser</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <span class="logo__flag">🏁</span>
-        <span class="logo__text">PIT STOP<br><small>BEBIDAS</small></span>
-        <p>Franquia especializada em bebidas geladas Antarctica, Skol e Brahma.</p>
+        <a href="#top" class="logo">
+          <span class="logo__mark" aria-hidden="true">A</span>
+          <span class="logo__text">Agenza</span>
+        </a>
+        <p>A plataforma de agendamento que se adapta à identidade do seu negócio.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Produto</h4>
+        <a href="#vantagens">Vantagens</a>
+        <a href="#personalizacao">Personalização</a>
+        <a href="#planos">Planos</a>
+      </div>
+      <div class="footer__col">
+        <h4>Empresa</h4>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#faq">Dúvidas</a>
       </div>
       <div class="footer__col">
         <h4>Fale conosco</h4>
-        <p>📞 (11) 4002-8922</p>
-        <p>✉️ contato@pitstopbebidas.com.br</p>
-        <a class="btn btn--whatsapp" id="whatsappContact" href="#" target="_blank" rel="noopener">Chamar no WhatsApp</a>
-      </div>
-      <div class="footer__col">
-        <h4>Institucional</h4>
-        <a href="#produtos">Produtos</a>
-        <a href="#como-funciona">Como funciona</a>
-        <a href="#franquia">Seja franqueado</a>
+        <p>✉️ ola@agenza.app</p>
+        <p>📍 Feito no Brasil</p>
       </div>
     </div>
-    <p class="footer__copy">© 2026 Pit Stop Bebidas. Todas as marcas pertencem aos seus respectivos proprietários. Beba com moderação.</p>
+    <p class="footer__copy">© 2026 Agenza. Todos os direitos reservados. Projeto de demonstração.</p>
   </footer>
 
-  <!-- CARRINHO LATERAL -->
-  <div class="cart-overlay" id="cartOverlay"></div>
-  <aside class="cart" id="cart" aria-hidden="true">
-    <div class="cart__header">
-      <h3>Seu pedido</h3>
-      <button class="cart__close" id="cartClose" aria-label="Fechar carrinho">✕</button>
-    </div>
+  <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">↑</button>
 
-    <div class="cart__items" id="cartItems">
-      <p class="cart__empty" id="cartEmpty">Seu carrinho está vazio. Adicione bebidas para começar seu pedido 🍺</p>
-    </div>
-
-    <div class="cart__footer">
-      <div class="cart__total-row">
-        <span>Total</span>
-        <strong id="cartTotal">R$ 0,00</strong>
-      </div>
-      <form class="cart__form" id="checkoutForm">
-        <input type="text" id="custName" placeholder="Seu nome" required>
-        <input type="tel" id="custPhone" placeholder="WhatsApp para contato" required>
-        <input type="text" id="custAddress" placeholder="Endereço de entrega" required>
-        <button type="submit" class="btn btn--whatsapp btn--block">Enviar pedido no WhatsApp</button>
-      </form>
-    </div>
-  </aside>
-
-  <a class="floating-whatsapp" id="floatingWhatsapp" href="#" target="_blank" rel="noopener" aria-label="Pedir pelo WhatsApp">💬</a>
-
-  <script src="js/script.js"></script>
+  <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
