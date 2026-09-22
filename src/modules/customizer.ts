@@ -61,6 +61,19 @@ const SEGMENT_PRESETS: Record<SegmentKey, SegmentPreset> = {
   },
 };
 
+const SEGMENT_LABELS: Record<SegmentKey, string> = {
+  barber: "Barbearia",
+  salon: "Salão de beleza",
+  clinic: "Clínica",
+  studio: "Estúdio",
+};
+
+const FONT_LABELS: Record<FontKey, string> = {
+  rounded: "Arredondada",
+  elegant: "Elegante",
+  bold: "Moderna",
+};
+
 function selectChip(group: HTMLElement, selected: HTMLElement): void {
   group.querySelectorAll<HTMLElement>(".chip, .swatch").forEach((chip) => {
     const isSelected = chip === selected;
@@ -80,6 +93,8 @@ export function initCustomizer(): void {
   const previewSubtitle = document.getElementById("previewSubtitle");
   const previewServices = document.getElementById("previewServices");
   const previewCta = document.getElementById("previewCta");
+  const summaryDot = document.getElementById("summaryDot");
+  const summaryText = document.getElementById("summaryText");
 
   if (
     !segmentGroup ||
@@ -91,14 +106,17 @@ export function initCustomizer(): void {
     !previewTitle ||
     !previewSubtitle ||
     !previewServices ||
-    !previewCta
+    !previewCta ||
+    !summaryDot ||
+    !summaryText
   ) {
     return;
   }
 
-  const state: { segment: SegmentKey; color: string; font: FontKey } = {
+  const state: { segment: SegmentKey; color: string; colorName: string; font: FontKey } = {
     segment: "barber",
     color: "#7C5CFC",
+    colorName: "Roxo",
     font: "rounded",
   };
 
@@ -111,6 +129,7 @@ export function initCustomizer(): void {
     previewSubtitle!.textContent = preset.subtitle;
     previewCta!.textContent = preset.cta;
     phoneMock!.setAttribute("data-font", state.font);
+    phoneMock!.style.setProperty("--phone-glow", state.color);
 
     previewServices!.innerHTML = "";
     preset.services.forEach((service) => {
@@ -119,6 +138,9 @@ export function initCustomizer(): void {
       row.innerHTML = `<span>${service.name}</span><strong>${service.price}</strong>`;
       previewServices!.appendChild(row);
     });
+
+    summaryDot!.style.setProperty("--sw", state.color);
+    summaryText!.textContent = `${SEGMENT_LABELS[state.segment]} · ${state.colorName} · ${FONT_LABELS[state.font]}`;
   }
 
   segmentGroup.addEventListener("click", (event) => {
@@ -137,6 +159,7 @@ export function initCustomizer(): void {
     const color = target.dataset["color"];
     if (!color) return;
     state.color = color;
+    state.colorName = target.getAttribute("aria-label") ?? "";
     selectChip(colorGroup, target);
     render();
   });

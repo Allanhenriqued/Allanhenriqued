@@ -194,52 +194,64 @@
           <p>Escolha o segmento, a cor da marca e o estilo da tipografia — veja a prévia mudar instantaneamente.</p>
         </div>
 
-        <div class="customizer__grid" data-reveal>
-          <div class="customizer__controls">
-            <div class="control-group">
-              <span class="control-label">1. Segmento do negócio</span>
-              <div class="chip-group" id="segmentGroup" role="radiogroup" aria-label="Segmento do negócio">
-                <button class="chip is-active" data-segment="barber" role="radio" aria-checked="true">Barbearia</button>
-                <button class="chip" data-segment="salon" role="radio" aria-checked="false">Salão de beleza</button>
-                <button class="chip" data-segment="clinic" role="radio" aria-checked="false">Clínica</button>
-                <button class="chip" data-segment="studio" role="radio" aria-checked="false">Estúdio</button>
-              </div>
-            </div>
-
-            <div class="control-group">
-              <span class="control-label">2. Cor da marca</span>
-              <div class="swatch-group" id="colorGroup" role="radiogroup" aria-label="Cor da marca">
-                <button class="swatch is-active" style="--sw:#7C5CFC" data-color="#7C5CFC" role="radio" aria-checked="true" aria-label="Roxo"></button>
-                <button class="swatch" style="--sw:#22C1A6" data-color="#22C1A6" role="radio" aria-checked="false" aria-label="Verde"></button>
-                <button class="swatch" style="--sw:#FF6B6B" data-color="#FF6B6B" role="radio" aria-checked="false" aria-label="Coral"></button>
-                <button class="swatch" style="--sw:#FFB020" data-color="#FFB020" role="radio" aria-checked="false" aria-label="Âmbar"></button>
-                <button class="swatch" style="--sw:#3E8BFF" data-color="#3E8BFF" role="radio" aria-checked="false" aria-label="Azul"></button>
-              </div>
-            </div>
-
-            <div class="control-group">
-              <span class="control-label">3. Estilo da tipografia</span>
-              <div class="chip-group" id="fontGroup" role="radiogroup" aria-label="Estilo da tipografia">
-                <button class="chip is-active" data-font="rounded" role="radio" aria-checked="true">Arredondada</button>
-                <button class="chip" data-font="elegant" role="radio" aria-checked="false">Elegante</button>
-                <button class="chip" data-font="bold" role="radio" aria-checked="false">Moderna</button>
-              </div>
-            </div>
-
-            <p class="customizer__hint">Essa é só uma prévia — no painel completo você também edita textos, serviços, fotos e regras de horário.</p>
+        <div class="editor" data-reveal>
+          <div class="editor__bar">
+            <span class="editor__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="editor__crumb">Painel Agenza — Personalização da página</span>
           </div>
 
-          <div class="customizer__preview">
-            <div class="phone-mock" data-parallax="-0.05">
-              <div class="phone-mock__notch" aria-hidden="true"></div>
-              <div class="phone-mock__screen" id="previewScreen">
-                <div class="preview-cover">
-                  <span class="preview-avatar" id="previewAvatar">💈</span>
-                  <h3 id="previewTitle">Barbearia do Zé</h3>
-                  <p id="previewSubtitle">Agende seu horário em poucos toques</p>
+          <div class="editor__body">
+            <div class="editor__panel">
+              <div class="control-group">
+                <span class="control-label">1. Segmento do negócio</span>
+                <div class="chip-group" id="segmentGroup" role="radiogroup" aria-label="Segmento do negócio">
+                  <button class="chip is-active" data-segment="barber" role="radio" aria-checked="true"><span class="chip__glyph">💈</span>Barbearia</button>
+                  <button class="chip" data-segment="salon" role="radio" aria-checked="false"><span class="chip__glyph">💇</span>Salão de beleza</button>
+                  <button class="chip" data-segment="clinic" role="radio" aria-checked="false"><span class="chip__glyph">🩺</span>Clínica</button>
+                  <button class="chip" data-segment="studio" role="radio" aria-checked="false"><span class="chip__glyph">🧘</span>Estúdio</button>
                 </div>
-                <div class="preview-services" id="previewServices"></div>
-                <button class="preview-cta" id="previewCta">Agendar agora</button>
+              </div>
+
+              <div class="control-group">
+                <span class="control-label">2. Cor da marca</span>
+                <div class="swatch-group" id="colorGroup" role="radiogroup" aria-label="Cor da marca">
+                  <button class="swatch is-active" style="--sw:#7C5CFC" data-color="#7C5CFC" role="radio" aria-checked="true" aria-label="Roxo"></button>
+                  <button class="swatch" style="--sw:#22C1A6" data-color="#22C1A6" role="radio" aria-checked="false" aria-label="Verde"></button>
+                  <button class="swatch" style="--sw:#FF6B6B" data-color="#FF6B6B" role="radio" aria-checked="false" aria-label="Coral"></button>
+                  <button class="swatch" style="--sw:#FFB020" data-color="#FFB020" role="radio" aria-checked="false" aria-label="Âmbar"></button>
+                  <button class="swatch" style="--sw:#3E8BFF" data-color="#3E8BFF" role="radio" aria-checked="false" aria-label="Azul"></button>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <span class="control-label">3. Estilo da tipografia</span>
+                <div class="chip-group chip-group--font" id="fontGroup" role="radiogroup" aria-label="Estilo da tipografia">
+                  <button class="chip is-active" data-font="rounded" role="radio" aria-checked="true"><span class="chip__glyph chip__glyph--rounded">Aa</span>Arredondada</button>
+                  <button class="chip" data-font="elegant" role="radio" aria-checked="false"><span class="chip__glyph chip__glyph--elegant">Aa</span>Elegante</button>
+                  <button class="chip" data-font="bold" role="radio" aria-checked="false"><span class="chip__glyph chip__glyph--bold">Aa</span>Moderna</button>
+                </div>
+              </div>
+
+              <div class="editor__summary">
+                <span class="editor__summary-dot" id="summaryDot" style="--sw:#7C5CFC" aria-hidden="true"></span>
+                <span>Tema atual: <strong id="summaryText">Barbearia · Roxo · Arredondada</strong></span>
+              </div>
+
+              <p class="customizer__hint">Essa é só uma prévia — no painel completo você também edita textos, serviços, fotos e regras de horário.</p>
+            </div>
+
+            <div class="editor__preview">
+              <div class="phone-mock" data-parallax="-0.05" id="phoneMock">
+                <div class="phone-mock__notch" aria-hidden="true"></div>
+                <div class="phone-mock__screen" id="previewScreen">
+                  <div class="preview-cover">
+                    <span class="preview-avatar" id="previewAvatar">💈</span>
+                    <h3 id="previewTitle">Barbearia do Zé</h3>
+                    <p id="previewSubtitle">Agende seu horário em poucos toques</p>
+                  </div>
+                  <div class="preview-services" id="previewServices"></div>
+                  <button class="preview-cta" id="previewCta">Agendar agora</button>
+                </div>
               </div>
             </div>
           </div>
